@@ -51,7 +51,8 @@ typedef NS_ENUM(NSInteger, TOCropViewControllerAspectRatioPreset) {
  */
 typedef NS_ENUM(NSInteger, TOCropViewControllerToolbarPosition) {
     TOCropViewControllerToolbarPositionBottom,  // Bar is placed along the bottom in portrait
-    TOCropViewControllerToolbarPositionTop     // Bar is placed along the top in portrait (Respects the status bar)
+    TOCropViewControllerToolbarPositionTop,     // Bar is placed along the top in portrait (Respects the status bar)
+    TOCropViewControllerToolbarPositionHidden   //
 };
 
 static inline NSBundle *TO_CROP_VIEW_RESOURCE_BUNDLE_FOR_OBJECT(NSObject *object) {
