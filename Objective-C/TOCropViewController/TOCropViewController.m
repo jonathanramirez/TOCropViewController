@@ -282,7 +282,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 {
     CGRect frame = CGRectZero;
 
-    if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
+    if (self.toolbarPosition == TOCropViewControllerToolbarPositionHidden) {
         return frame;
     }
 
@@ -424,7 +424,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 
 - (void)adjustToolbarInsets
 {
-    if (self.toolbarPosition != TOCropViewControllerToolbarPositionHidden){
+    if (self.toolbarPosition != TOCropViewControllerToolbarPositionHidden) {
 
         UIEdgeInsets insets = UIEdgeInsetsZero;
 
@@ -1120,7 +1120,6 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     if (!_toolbar) {
         _toolbar = [[TOCropToolbar alloc] initWithFrame:CGRectZero];
         [self.view addSubview:_toolbar];
-        _toolbar.hidden = true;
     }
     return _toolbar;
 }
