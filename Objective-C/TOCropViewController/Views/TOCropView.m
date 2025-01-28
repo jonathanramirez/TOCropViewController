@@ -1257,6 +1257,11 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
         [self moveCroppedContentToCenterAnimated:animated];
         [self captureStateForImageRotation];
         self.cropBoxLastEditedAngle = self.angle;
+
+        if ([self.delegate respondsToSelector:@selector(cropViewDidCrop:)])
+            [self.delegate cropViewDidCrop:self];
+
+
     }
     
     if (animated == NO) {

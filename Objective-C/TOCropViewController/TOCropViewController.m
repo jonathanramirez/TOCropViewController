@@ -117,6 +117,8 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     
     BOOL circularMode = (self.croppingStyle == TOCropViewCroppingStyleCircular);
 
+    _toolbar.hidden = self.toolbarPosition == TOCropViewControllerToolbarPositionHidden;
+
     // Layout the views initially
     self.cropView.frame = [self frameForCropViewWithVerticalLayout:self.verticalLayout];
 
@@ -1120,6 +1122,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     if (!_toolbar) {
         _toolbar = [[TOCropToolbar alloc] initWithFrame:CGRectZero];
         [self.view addSubview:_toolbar];
+        _toolbar.hidden = YES;
     }
     return _toolbar;
 }
